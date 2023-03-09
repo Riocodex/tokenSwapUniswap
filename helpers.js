@@ -12,3 +12,12 @@ exports.getPoolImmutables = async(poolContract) =>{
     }
     return immutables
 }
+
+exports.getPoolState = async (poolContract) =>{
+    const slot = poolContract.slot0()
+
+    const state = {
+        sqrtPriceX96: slot[0]
+    }
+    return state
+}
