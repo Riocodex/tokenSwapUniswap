@@ -29,5 +29,7 @@ async function main(){
         IUniswapV3PoolABI,
         provider
     )
+    const immutables = await getPoolImmutables(poolContract)
+    const state = await getPoolState(poolContract)
 }
 main()
