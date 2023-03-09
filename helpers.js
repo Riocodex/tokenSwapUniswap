@@ -22,3 +22,12 @@ const name1 = 'Uniswap Token'
 const symbol1 = 'UNI'
 const decimals1 = 18
 const address1 = '0x1f9840a85d5af5bf1d1762f925bdaddc4201f984'
+
+async function main(){
+    const poolContract = new ethers.Contract(
+        poolAddress,
+        IUniswapV3PoolABI,
+        provider
+    )
+}
+main()
